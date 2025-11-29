@@ -1,4 +1,4 @@
-# Nmap-
+# Nmap
 
 ## Objective
 Evaluate several features of Nmap, including host discovery, port scanning, and service enumeration
