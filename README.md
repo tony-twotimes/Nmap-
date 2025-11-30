@@ -117,6 +117,19 @@ I find that The host is running Microsoft IIS 10.0, confirming a modern Windows 
 or custom content were revealed at this stage.
 
 
+Step 5: Default Script Scan 
+
+### <img width="830" height="399" alt="image" src="https://github.com/user-attachments/assets/9ae418f3-e64b-47b4-8713-95c53602391e" />
+
+
+For the final step, I ran Nmap’s default script and version detection scan. This gave me a complete snapshot of the target’s exposed services without going into tool-specific enumeration. The scan confirmed Microsoft IIS 10.0 on port 80, Microsoft RPC on port 135, and SMB services on ports 139 and 445. Nmap also identified a common SMB misconfiguration where message signing is enabled but not required. That’s useful security context, but still within the scope of Nmap’s built-in capabilities.
+
+Step 5 is the last step because it represents the point where Nmap has done everything it reasonably can: it has discovered ports, identified services and versions, performed OS detection, and run all the default safe scripts. Going any further would move into deeper SMB enumeration, which is best handled by tools like smbclient in a dedicated SMB lab. At this point, Nmap has provided all the recon information I need before switching to service-specific tools.
+
+This concludes the Nmap lab. My next phase will focus on SMB enumeration using smbclient.
+
+
+
 
 
 
