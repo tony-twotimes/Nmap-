@@ -119,7 +119,8 @@ or custom content were revealed at this stage.
 
 Step 5: Default Script Scan 
 
-### <img width="830" height="399" alt="image" src="https://github.com/user-attachments/assets/9ae418f3-e64b-47b4-8713-95c53602391e" />
+### <img width="833" height="498" alt="image" src="https://github.com/user-attachments/assets/d17f6a2f-00a1-4f42-ba9b-bbee23b37957" />
+
 
 
 For the final step, I ran Nmap’s default script and version detection scan. This gave me a complete snapshot of the target’s exposed services without going into tool-specific enumeration. The scan confirmed Microsoft IIS 10.0 on port 80, Microsoft RPC on port 135, and SMB services on ports 139 and 445. Nmap also identified a common SMB misconfiguration where message signing is enabled but not required. That’s useful security context, but still within the scope of Nmap’s built-in capabilities.
