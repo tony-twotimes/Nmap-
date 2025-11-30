@@ -26,7 +26,7 @@ Step 1: Port Scan Vulnerable Windows system
 
 Step 2: Enumerate Services 
 
-*There is an HTTP service running on port 80 that we can enumberate*
+*There is an HTTP service running on port 80 that we can enumerate*
 
 ### <img width="757" height="226" alt="image" src="https://github.com/user-attachments/assets/d19eb017-aaaa-4f8b-8105-77655c842a84" />
 
