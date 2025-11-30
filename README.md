@@ -47,7 +47,6 @@ We discovered:
 This confirms the host is Windows-based and running classic Windows services (SMB, RPC).
 It also showed that SSH is unexpectedly enabled, which is unusual for Windows.
 
-This scan acts as your baseline enumeration
 
 Step 2: Enumerate Services 
 
