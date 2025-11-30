@@ -101,22 +101,20 @@ After identifying open ports and service versions, my next thoughts are to
 
 This helps confirm the host is truly Windows and gives more information about potential vulnerabilities.
 
-Step 4: Service-Specific Light Enumeration 
+Step 4: HTTP Service Enumberation Using NSE 
+
 
 ### <img width="607" height="293" alt="image" src="https://github.com/user-attachments/assets/58d8a508-6efc-4c96-9eac-e9d156c47e35" />
 
+I used Nmap’s http-title and http-headers NSE scripts to perform light enumeration of the HTTP service running on port 80. This step gathers mnetadata about the web server without performing intrusive testing, which confirms: 
 
-
-The purpose of this step is to do a light, safe NSE script enumeration on the non-SMB services. We can use Nmap's NSE engine to extract 
-
-- metadata about the web server
+- the web technology being used
 - default configuration details
-- server technology
-- response headers
-- timestamping behavior
+- any security headers present or missing
+- whether the site is running a default, custom, or vulnerable app
 
-
-
+I find that The host is running Microsoft IIS 10.0, confirming a modern Windows environment. The default IIS landing page is still present (http-title: IIS Windows).Response headers show no obfuscation or security hardening. No additional directories 
+or custom content were revealed at this stage.
 
 
 
