@@ -19,4 +19,8 @@ Evaluate several features of Nmap, including host discovery, port scanning, and 
 
 
 ## Steps
-*In progress*
+
+Step 1: Port Scan Vulnerable Windows system
+
+### <img width="599" height="287" alt="image" src="https://github.com/user-attachments/assets/92a76cb5-0f92-4add-aa83-f83307af6618" />
+
