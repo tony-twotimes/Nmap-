@@ -24,7 +24,7 @@ Step 1: Port Scan Vulnerable Windows system
 
 ### <img width="599" height="287" alt="image" src="https://github.com/user-attachments/assets/92a76cb5-0f92-4add-aa83-f83307af6618" />
 
-Why I Ran This:
+Why I Ran This
 
 This is the initial surface-level scan to identify what common TCP ports are open on the target. It provides a quick picture of:
 
@@ -48,11 +48,37 @@ This confirms the host is Windows-based and running classic Windows services (SM
 It also showed that SSH is unexpectedly enabled, which is unusual for Windows.
 
 
-Step 2: Enumerate Services 
-
-*There are several services worth enumerating here. 80/tcp, if IIS is installed, we can enumerate web content, directories, versions and exploits. 135/tcp Remote Procedure Call - a gateway to lots of Win enumeration that is necessary for SMB. 139/tcp Clasic SMB enumberation shares, users and sessions. 445/tcp This is the main service I'll focus on. Here we'll find Shares, permissions, SMB versions, users, and potential exploits. I will work on enumerating this more in a future lab; for now I'd like to continue evaluating Nmap's capabilities.*
+Step 2: Targeted Port and Version Scan
 
 ### <img width="759" height="330" alt="image" src="https://github.com/user-attachments/assets/d7d6236e-4465-41ff-af3c-4c56e359fabb" />
+
+Why I Ran This
+
+Once the first scan found open ports, this second scan focuses on:
+
+- Only the interesting ports
+- Service versions running on those ports
+- More detailed fingerprints
+
+The purpose is to validate the initial findings and gather actionable information:
+
+- What version of IIS?
+- What version of SMB?
+- What type of RPC service?
+- What OS fingerprint emerges?
+
+The goal is to  move from discovery to enumeration.
+
+What It Revealed
+
+Now we know:
+
+- Port 80 → Microsoft IIS 10.0 (confirms a Windows 10 / Server 2016+ environment)
+- Port 135 → Microsoft Windows RPC
+- Port 139 → NetBIOS (SMBv1-related traffic)
+- Port 445 → SMB (active windows file-sharing service)
+
+
 
 
 
