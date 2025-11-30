@@ -24,6 +24,31 @@ Step 1: Port Scan Vulnerable Windows system
 
 ### <img width="599" height="287" alt="image" src="https://github.com/user-attachments/assets/92a76cb5-0f92-4add-aa83-f83307af6618" />
 
+Why I Ran This:
+
+This is the initial surface-level scan to identify what common TCP ports are open on the target. It provides a quick picture of:
+
+- which services are exposed
+- whether the host is alive
+- whether the network path is normal (no firewalls blocking)
+- This is the first step my recon workflow.
+
+-What It Revealed:
+
+We discovered:
+
+- SSH (22)
+- HTTP (80)
+- MSRPC (135)
+- NetBIOS (139)
+- SMB (445)
+- WSDAPI (5357)
+
+This confirms the host is Windows-based and running classic Windows services (SMB, RPC).
+It also showed that SSH is unexpectedly enabled, which is unusual for Windows.
+
+This scan acts as your baseline enumeration
+
 Step 2: Enumerate Services 
 
 *There are several services worth enumerating here. 80/tcp, if IIS is installed, we can enumerate web content, directories, versions and exploits. 135/tcp Remote Procedure Call - a gateway to lots of Win enumeration that is necessary for SMB. 139/tcp Clasic SMB enumberation shares, users and sessions. 445/tcp This is the main service I'll focus on. Here we'll find Shares, permissions, SMB versions, users, and potential exploits. I will work on enumerating this more in a future lab; for now I'd like to continue evaluating Nmap's capabilities.*
