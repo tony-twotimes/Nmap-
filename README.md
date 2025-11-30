@@ -82,7 +82,24 @@ Step 3: OS Detection & Aggressive Enumeration
 
 ### <img width="794" height="696" alt="image" src="https://github.com/user-attachments/assets/c6aafcda-2d76-481a-b4ed-e90b6232d1b4" />
 
+Why I Ran This
 
+After identifying open ports and service versions, my next thoughts are to
+
+- fingerprint the operating system
+- identify Windows build family
+- probe for network distance (hops)
+- gather banner details
+- run Nmap default scripts automatically
+
+-A is aggressive enumeration, combining:
+
+- OS detection
+- version detection
+- script scanning
+- traceroute
+
+This helps confirm the host is truly Windows and gives more information about potential vulnerabilities.
 
 
 
