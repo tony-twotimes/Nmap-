@@ -78,6 +78,9 @@ Now we know:
 - Port 139 → NetBIOS (SMBv1-related traffic)
 - Port 445 → SMB (active windows file-sharing service)
 
+Step 3: OS Detection & Aggressive Enumeration 
+
+### <img width="794" height="696" alt="image" src="https://github.com/user-attachments/assets/c6aafcda-2d76-481a-b4ed-e90b6232d1b4" />
 
 
 
