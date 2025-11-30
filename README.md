@@ -101,6 +101,21 @@ After identifying open ports and service versions, my next thoughts are to
 
 This helps confirm the host is truly Windows and gives more information about potential vulnerabilities.
 
+Step 4: Service-Specific Light Enumeration 
+
+### <img width="607" height="293" alt="image" src="https://github.com/user-attachments/assets/58d8a508-6efc-4c96-9eac-e9d156c47e35" />
+
+
+
+The purpose of this step is to do a light, safe NSE script enumeration on the non-SMB services. We can use Nmap's NSE engine to extract 
+
+- metadata about the web server
+- default configuration details
+- server technology
+- response headers
+- timestamping behavior
+
+
 
 
 
