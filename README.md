@@ -33,7 +33,7 @@ This is the initial surface-level scan to identify what common TCP ports are ope
 - whether the network path is normal (no firewalls blocking)
 - This is the first step my recon workflow.
 
--What It Revealed:
+What It Revealed:
 
 We discovered:
 
